@@ -18,14 +18,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {JpaConfiguration.class})
@@ -40,7 +36,6 @@ public class DemoApplicationTests {
     UserRepository userRepository;
     @Autowired
     RoleRepository roleRepository;
-    private Page<User> all;
 
     @Before
     public void initData() {

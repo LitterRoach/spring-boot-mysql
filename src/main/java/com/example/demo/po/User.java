@@ -37,7 +37,7 @@ public class User {
     @JsonBackReference
     private Department department;
 
-    @ManyToMany(cascade = {}, fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "tb_user_role", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name="role_id")})
     private List<Role> roles;
 
